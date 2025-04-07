@@ -5,9 +5,8 @@ import { VitePWA } from "vite-plugin-pwa";
 import { qrcode } from "vite-plugin-qrcode";
 import manifest from "./manifest";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: './', 
   test: {
     globals: true,
   },
@@ -16,7 +15,6 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    // Generate QR code for npm run dev:host
     qrcode({ filter: (url) => url.startsWith("http://192.168.0.") }),
     VitePWA({
       manifest,
@@ -26,7 +24,6 @@ export default defineConfig({
       },
       registerType: "prompt",
       workbox: {
-        // Use runtime caching for dynamic imports
         runtimeCaching: [
           {
             urlPattern: ({ request }) =>

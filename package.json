@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "postinstall": "npx puppeteer browsers install chrome",
     "dev": "vite",
     "dev:host": "vite --host",
     "test": "vitest",
