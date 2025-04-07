@@ -7,6 +7,7 @@ import manifest from "./manifest";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   test: {
     globals: true,
   },
