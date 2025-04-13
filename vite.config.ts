@@ -6,7 +6,7 @@ import { qrcode } from "vite-plugin-qrcode";
 import manifest from "./manifest";
 
 export default defineConfig({
-  base: './', 
+  base: '/', 
   test: {
     globals: true,
   },
